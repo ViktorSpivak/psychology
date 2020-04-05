@@ -1,0 +1,40 @@
+hr {
+  margin: 0;
+}
+.nav {
+  height: 20%;
+  align-content: center;
+}
+.address {
+  height: 18%;
+}
+.phone {
+  height: 10%;
+}
+.mail {
+  height: 10%;
+}
+.socials {
+  height: 10%;
+}
+.ask {
+  font-size: 30px;
+  align-content: center;
+  text-align: center;
+  height: 30%;
+  margin: 0 auto;
+}
+.address__data {
+  /* font-family: "Source Code Pro", monospace; */
+  font-size: 45px;
+  font-weight: 100;
+}
+.phone__data {
+  font-style: 20px;
+}
+.mail_data {
+  font-style: 20px;
+}
+.socials_data {
+  font-style: 20px;
+}

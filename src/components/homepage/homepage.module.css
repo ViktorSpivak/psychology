@@ -1,0 +1,157 @@
+.container {
+  margin: 0 auto;
+}
+.mainclass {
+}
+.headerBlock {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+.sign {
+  text-align: center;
+  font-weight: 200;
+}
+.sign__text {
+  font-size: 40px;
+  margin: 0;
+  /* padding-top: 20px; */
+}
+.prophesy {
+  font-size: 22px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-left: 0;
+}
+
+.frontInfoList {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  padding-top: 20px;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+}
+
+.prophesy__list {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-left: 5px;
+}
+.frontInfoList__list {
+  padding-top: 15px;
+}
+.prophesy__link {
+  color: black;
+  align-content: center;
+}
+.frontInfoList__link {
+  composes: prophesy__link;
+}
+
+.runningLine {
+  display: none;
+}
+.runningLine_link {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+.footerStyle {
+  display: none;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.gameClick {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+@media (min-width: 768px) {
+  .sign__text {
+    padding-top: 60px;
+  }
+  .headerBlock {
+    padding-top: 30px;
+  }
+  .prophesy {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .prophesy__list {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .frontInfoList {
+    flex-direction: row;
+    padding-top: 40px;
+    flex-wrap: wrap;
+  }
+  .frontInfoList__list {
+    padding-top: 50px;
+    width: 33%;
+  }
+
+  .runningLine {
+    padding-top: 60px;
+    width: 100%;
+    display: inline-block;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .runningLine_link {
+    display: inline-block;
+    padding-left: 100%;
+    animation-timing-function: linear;
+    animation-duration: 18s;
+    animation-name: runningLine;
+    animation-iteration-count: infinite;
+  }
+  .gameClick {
+    padding-top: 40px;
+  }
+  .gameClick_link {
+    color: black;
+  }
+  .footerStyle {
+    display: block;
+    padding-top: 170px;
+  }
+}
+@media (min-width: 1024px) {
+  .sign {
+  }
+  .sign__text {
+    padding-top: 90px;
+  }
+  .frontInfoList {
+    flex-wrap: nowrap;
+    padding-top: 70px;
+  }
+  .runningLine {
+    padding-top: 100px;
+  }
+  .gameClick {
+    padding-top: 50px;
+  }
+  .footerStyle {
+    padding-top: 150px;
+  }
+}
+@keyframes runningLine {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
