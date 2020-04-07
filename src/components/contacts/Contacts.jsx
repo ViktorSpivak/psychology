@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Col, Row, Container } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 import style from "./contacts.module.css";
 import SocialLinks from "../sociallinks/SocialLinks";
 import Menu from "../menu/Menu";
@@ -9,7 +9,7 @@ const Contacts = () => {
   return (
     <Container className="vh-100  p-0 container-fluid">
       <Row className={style.nav}>
-        <Col>Julia Sohach</Col>
+        <Col>Yulia Sohach</Col>
         <Col sm={{ span: 1, offset: 8 }}>
           <Menu />
         </Col>
@@ -45,7 +45,11 @@ const Contacts = () => {
       </Row>
       <hr color="black"></hr>
       <Row sm={12} className={style.ask}>
-        <Col className={style.ask_style}>Ask me</Col>
+        <Col>
+          <Link to="/useful" className={style.ask_style}>
+            Ask me
+          </Link>
+        </Col>
       </Row>
     </Container>
   );

@@ -25,7 +25,7 @@ export class App extends Component {
           {/* <Route path="/mystory" component={MyStory}></Route>
         <Route path="/specialization" component={Specialization}></Route>
         <Route path="/forwhom" component={ForWhom}></Route> */}
-          {/* <Route path="/contacts" component={Contacts}></Route> */}
+          <Route path="/contacts" component={Contacts}></Route>
           {/* <Route path="/watch" component={Watch}></Route> */}
           {/* <Route path="/read" component={Read}></Route> */}
           <Route path="/useful" component={Useful}></Route>

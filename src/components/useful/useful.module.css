@@ -1,18 +1,86 @@
+.useful {
+  margin: 0 auto;
+  width: 90%;
+}
 .useful__Form {
-  padding-top: 20vh;
+  padding-top: 5vh;
 }
 .useful__title {
-  padding-bottom: 5vh;
+  padding-bottom: 3vh;
 }
-
 .useful__title {
   text-align: center;
 }
-.inputStyle {
-  width: 100vw;
+.useful__input {
+  width: inherit;
+  width: 100%;
   height: 10vh;
   border: none;
   outline: none;
   border-bottom: solid 1px black;
   font-size: 30px;
+}
+.useful__acceptBlock {
+  height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+.useful__acceptText_modification {
+  margin: 0;
+  padding-left: 15px;
+}
+
+.useful__acceptInput {
+  transform: scale(1.5);
+  margin-left: 10px;
+}
+.useful__acceptText {
+  color: red;
+  composes: useful__acceptText_modification;
+}
+
+.useful__acceptTextIsActive {
+  color: black;
+  composes: useful__acceptText_modification;
+}
+.useful__acceptCheckBox {
+  display: flex;
+  align-items: center;
+}
+.useful__acceptSubmit {
+  composes: useful__acceptCheckBox;
+}
+.useful__acceptSubmitText {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+}
+.useful__acceptLink {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .useful {
+    width: 500px;
+  }
+  .useful__Form {
+    margin-top: 15vh;
+  }
+  .useful__acceptBlock {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  /* .useful__acceptText_modification {
+  }
+  .useful__acceptSubmit {
+  } */
+}
+@media (min-width: 1024px) {
+  .useful {
+    width: 700px;
+  }
 }

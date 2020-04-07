@@ -24,8 +24,10 @@ hr {
   height: 30%;
   margin: 0 auto;
 }
+.ask_style {
+  color: black;
+}
 .address__data {
-  /* font-family: "Source Code Pro", monospace; */
   font-size: 45px;
   font-weight: 100;
 }
