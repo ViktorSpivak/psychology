@@ -9,7 +9,7 @@ import Menu from "../menu/Menu";
 // import NameLogo from "../namelogo/NameLogo";
 // import Read from "../read/Read";
 import Useful from "../useful/Useful";
-import SocialLinks from "../sociallinks/SocialLinks";
+import SocialLinks from "../socialLinks/SocialLinks";
 // import Specialization from "../specialization/Specialization";
 import style from "./app.module.css";
 

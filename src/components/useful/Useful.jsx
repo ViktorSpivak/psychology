@@ -32,7 +32,7 @@ export class Useful extends Component {
           className={style.useful__Form}
         >
           <h1 className={style.useful__title}>
-            Есть вопросы? Напиши мне сейчас !
+            Есть вопросы? Напиши мне сейчас&nbsp;!
           </h1>
           <input
             type="text"
@@ -43,6 +43,7 @@ export class Useful extends Component {
             autoComplete="off"
             placeholder="Имя"
           ></input>
+          <div className={style.line}></div>
           <input
             type="text"
             name="mail"
@@ -52,6 +53,7 @@ export class Useful extends Component {
             autoComplete="off"
             placeholder="Email"
           ></input>
+          <div className={style.line}></div>
           <input
             type="text"
             name="phone"
@@ -61,6 +63,7 @@ export class Useful extends Component {
             autoComplete="off"
             placeholder="Телефон"
           ></input>
+          <div className={style.line}></div>
           <input
             type="text"
             name="massage"
@@ -70,6 +73,7 @@ export class Useful extends Component {
             autoComplete="off"
             placeholder="Сообщение"
           ></input>
+          <div className={style.line}></div>
           <div className={style.useful__acceptBlock}>
             <div className={style.useful__acceptCheckBox}>
               <input

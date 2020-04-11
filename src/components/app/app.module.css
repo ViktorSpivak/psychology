@@ -13,6 +13,9 @@ body {
   /* font-family: "Bad Script", cursive; */
   font-family: "Poiret One", cursive;
 }
+a {
+  text-decoration: none;
+}
 img {
   display: block;
 }

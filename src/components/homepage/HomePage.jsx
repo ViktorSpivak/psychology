@@ -8,8 +8,9 @@ import MyStory from "../mystory/MyStory";
 // import NameLogo from "../namelogo/NameLogo";
 import Read from "../read/Read";
 import RuningLine from "../useful/Useful";
-import SocialLinks from "../sociallinks/SocialLinks";
+import SocialLinks from "../socialLinks/SocialLinks";
 import Spacialization from "../specialization/Specialization";
+import Wave from "../wave/Wave";
 import style from "./homepage.module.css";
 
 export class HomePage extends Component {
@@ -86,6 +87,7 @@ export class HomePage extends Component {
               </Link>
             </li>
           </ul>
+          {/* <Wave></Wave> */}
           <div className={style.runningLine}>
             <Link to="/useful" className={style.runningLine_link}>
               Есть вопросы? Напиши мне сейчас !
