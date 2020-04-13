@@ -1,5 +1,11 @@
 .canvasArea {
-  width: 100%;
-  height: 400px;
-  background: #337ab7;
+  display: none;
+}
+@media (min-width: 768px) {
+  .canvasArea {
+    display: block;
+    width: 100%;
+    height: 300px;
+    /* background: #337ab7; */
+  }
 }

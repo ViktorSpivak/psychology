@@ -16,7 +16,7 @@ import style from "./app.module.css";
 export class App extends Component {
   render() {
     return (
-      <div>
+      <div className={style}>
         <Switch>
           <Route path="/" exact component={HomePage}></Route>
           <Route path="/sociallinks" component={SocialLinks}></Route>

@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import { Route, Link, NavLink } from "react-router-dom";
-import Contacts from "../contacts/Contacts";
-import ForWhom from "../forwhom/ForWhom";
+import { Link, NavLink } from "react-router-dom";
+// import Contacts from "../contacts/Contacts";
+// import ForWhom from "../forwhom/ForWhom";
 import Menu from "../menu/Menu";
-import Watch from "../watch/Watch";
-import MyStory from "../mystory/MyStory";
+// import Watch from "../watch/Watch";
+// import MyStory from "../mystory/MyStory";
 // import NameLogo from "../namelogo/NameLogo";
-import Read from "../read/Read";
-import RuningLine from "../useful/Useful";
+// import Read from "../read/Read";
+// import RuningLine from "../useful/Useful";
 import SocialLinks from "../socialLinks/SocialLinks";
-import Spacialization from "../specialization/Specialization";
-import Wave from "../wave/Wave";
+// import Spacialization from "../specialization/Specialization";
+import Wave_copy from "../wave/Wave_copy";
 import style from "./homepage.module.css";
 
 export class HomePage extends Component {
@@ -87,7 +87,7 @@ export class HomePage extends Component {
               </Link>
             </li>
           </ul>
-          {/* <Wave></Wave> */}
+          <Wave_copy></Wave_copy>
           <div className={style.runningLine}>
             <Link to="/useful" className={style.runningLine_link}>
               Есть вопросы? Напиши мне сейчас !
