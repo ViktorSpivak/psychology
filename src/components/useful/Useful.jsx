@@ -32,7 +32,7 @@ export class Useful extends Component {
           className={style.useful__Form}
         >
           <h1 className={style.useful__title}>
-            Есть вопросы? Напиши мне сейчас&nbsp;!
+            Чем я могу быть полезна для Вас&nbsp;?
           </h1>
           <input
             type="text"

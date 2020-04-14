@@ -4,13 +4,14 @@
 .mainclass {
 }
 .headerBlock {
-  padding-top: 5px;
+  margin-top: 2vh;
   display: flex;
   justify-content: space-around;
 }
 .sign {
   text-align: center;
   font-weight: 200;
+  margin-top: 5vh;
 }
 .sign__text {
   font-size: 40px;
@@ -31,7 +32,7 @@
   display: flex;
   flex-direction: column;
   font-size: 22px;
-  padding-top: 20px;
+  padding-top: 3vh;
   list-style: none;
   text-align: center;
   align-items: center;
@@ -40,12 +41,12 @@
 }
 
 .prophesy__list {
-  padding-top: 5px;
+  margin-top: 1vh;
   padding-left: 5px;
   padding-left: 5px;
 }
 .frontInfoList__list {
-  padding-top: 15px;
+  margin-top: 2vh;
 }
 .prophesy__link {
   color: black;
@@ -55,13 +56,16 @@
   composes: prophesy__link;
 }
 
-.runningLine {
+/* .runningLine {
   display: none;
 }
 .runningLine_link {
   text-decoration: none;
   color: black;
   font-size: 30px;
+} */
+.wave {
+  display: none;
 }
 .footerStyle {
   display: none;
@@ -73,14 +77,14 @@
 .gameClick {
   font-size: 20px;
   text-align: center;
-  padding-top: 10px;
+  margin-top: 8vh;
 }
 @media (min-width: 768px) {
   .sign__text {
-    padding-top: 60px;
+    margin-top: 10vh;
   }
   .headerBlock {
-    padding-top: 30px;
+    margin-top: 5vh;
   }
   .prophesy {
     flex-direction: row;
@@ -92,15 +96,17 @@
   }
   .frontInfoList {
     flex-direction: row;
-    padding-top: 40px;
+    margin-top: 8vh;
     flex-wrap: wrap;
   }
   .frontInfoList__list {
-    padding-top: 50px;
+    margin-top: 3vh;
     width: 33%;
   }
-
-  .runningLine {
+  .wave {
+    display: block;
+  }
+  /* .runningLine {
     padding-top: 60px;
     width: 100%;
     display: inline-block;
@@ -115,36 +121,42 @@
     animation-duration: 18s;
     animation-name: runningLine;
     animation-iteration-count: infinite;
-  }
+  } */
   .gameClick {
-    padding-top: 40px;
+    margin-top: 0;
   }
   .gameClick_link {
     color: black;
   }
   .footerStyle {
     display: block;
-    padding-top: 170px;
+    margin-top: 5vh;
   }
 }
 @media (min-width: 1024px) {
   .sign {
   }
+  .prophesy {
+    margin-top: 5vh;
+  }
   .sign__text {
-    padding-top: 90px;
+    /* margin-top: 90px; */
   }
   .frontInfoList {
     flex-wrap: nowrap;
-    padding-top: 70px;
+    margin-top: 6vh;
   }
-  .runningLine {
-    padding-top: 100px;
+  .wave {
+    margin-top: 6vh;
   }
+  /* .runningLine {
+    margin-top: 100px;
+  } */
   .gameClick {
-    padding-top: 50px;
+    /* margin-top: 50px; */
   }
   .footerStyle {
-    padding-top: 150px;
+    margin-top: 5vh;
   }
 }
 @keyframes runningLine {

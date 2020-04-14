@@ -10,7 +10,7 @@ import Menu from "../menu/Menu";
 // import RuningLine from "../useful/Useful";
 import SocialLinks from "../socialLinks/SocialLinks";
 // import Spacialization from "../specialization/Specialization";
-import Wave_copy from "../wave/Wave_copy";
+import Wave from "../wave/Wave";
 import style from "./homepage.module.css";
 
 export class HomePage extends Component {
@@ -87,12 +87,15 @@ export class HomePage extends Component {
               </Link>
             </li>
           </ul>
-          <Wave_copy></Wave_copy>
-          <div className={style.runningLine}>
+          <div className={style.wave}>
+            <Wave></Wave>
+          </div>
+
+          {/* <div className={style.runningLine}>
             <Link to="/useful" className={style.runningLine_link}>
               Есть вопросы? Напиши мне сейчас !
             </Link>
-          </div>
+          </div> */}
           <div className={style.gameClick}>
             <Link to="\" className={style.gameClick_link}>
               Don`t click it :)

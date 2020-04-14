@@ -1,11 +1,6 @@
 .canvasArea {
-  display: none;
-}
-@media (min-width: 768px) {
-  .canvasArea {
-    display: block;
-    width: 100%;
-    height: 300px;
-    /* background: #337ab7; */
-  }
+  width: 100%;
+  height: 250px;
+  /* opacity: 0.6; */
+  /* color: rgb(235, 127, 33); */
 }
