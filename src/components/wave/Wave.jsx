@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import style from "./wave.module.css";
 
 const NUM_PARTICLES = 170;
-const PARTICLE_SIZE = 1;
+const PARTICLE_SIZE = 1.5;
 const SPEED = 20000;
 let particles = [];
 export class Wave extends Component {

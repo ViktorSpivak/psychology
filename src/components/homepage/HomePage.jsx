@@ -15,8 +15,6 @@ import style from "./homepage.module.css";
 
 export class HomePage extends Component {
   render() {
-    const actualWidth = document.body.clientWidth;
-
     return (
       <div className={style.container}>
         <header className={style.headerBlock}>
@@ -33,7 +31,7 @@ export class HomePage extends Component {
                 to="/spacialization/mentoring"
                 className={style.prophesy__link}
               >
-                Ментор.
+                Коуч.
               </NavLink>
             </li>
             <li className={style.prophesy__list}>
@@ -41,7 +39,7 @@ export class HomePage extends Component {
                 to="/spacialization/coaching"
                 className={style.prophesy__link}
               >
-                Коуч.
+                Ментор.
               </Link>
             </li>
             <li className={style.prophesy__list}>
@@ -56,17 +54,18 @@ export class HomePage extends Component {
           <ul className={style.frontInfoList}>
             <li className={style.frontInfoList__list}>
               <Link to="/story" className={style.frontInfoList__link}>
-                Моя {actualWidth > 767 && <br />} история
+                Обо мне
               </Link>
             </li>
             <li className={style.frontInfoList__list}>
               <Link to="/spacialization" className={style.frontInfoList__link}>
-                Моя специализация <br /> и возможности
+                Ситуации,
+                <br /> когда ко мне обращаются
               </Link>
             </li>
             <li className={style.frontInfoList__list}>
               <Link to="/forwhom" className={style.frontInfoList__link}>
-                Как и для кого <br /> я работаю
+                Как это работает
               </Link>
             </li>
             <li className={style.frontInfoList__list}>
@@ -76,16 +75,14 @@ export class HomePage extends Component {
             </li>
             <li className={style.frontInfoList__list}>
               <Link to="/watch" className={style.frontInfoList__link}>
-                Что {actualWidth > 767 && <br />}
-                посмотреть
+                Посмотреть и почитать
               </Link>
             </li>
-            <li className={style.frontInfoList__list}>
+            {/* <li className={style.frontInfoList__list}>
               <Link to="/read" className={style.frontInfoList__link}>
-                Что {actualWidth > 767 && <br />}
-                почитать
+                Почитать
               </Link>
-            </li>
+            </li> */}
           </ul>
           <div className={style.wave}>
             <Wave></Wave>
@@ -97,7 +94,7 @@ export class HomePage extends Component {
             </Link>
           </div> */}
           <div className={style.gameClick}>
-            <Link to="\" className={style.gameClick_link}>
+            <Link to="/game" className={style.gameClick_link}>
               Don`t click it :)
             </Link>
           </div>

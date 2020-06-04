@@ -1,11 +1,10 @@
 import React from "react";
-// import { Button, Col, Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import style from "./contacts.module.css";
 import SocialLinks from "../socialLinks/SocialLinks";
 import Menu from "../menu/Menu";
 
-const Contacts = () => {
+export const Contacts = () => {
   return (
     <div className={style.container}>
       <div className={style.nav}>
@@ -50,5 +49,3 @@ const Contacts = () => {
     </div>
   );
 };
-
-export default Contacts;
