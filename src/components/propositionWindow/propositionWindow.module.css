@@ -34,6 +34,7 @@
   height: 40%;
   text-align: center;
   background-color: blueviolet;
+  z-index: 100;
 }
 .modalWindow__title {
   margin-top: 10vh;

@@ -4,9 +4,9 @@ import style from "./propositionWindow.module.css";
 
 export const PropositionWindow = () => {
   const [show, setShow] = useState(false);
-  useEffect(() => {
-    setTimeout(() => setShow(true), 30000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => setShow(true), 30000);
+  // }, []);
   return (
     <CSSTransition
       in={show}

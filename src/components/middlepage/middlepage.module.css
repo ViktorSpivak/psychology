@@ -1,0 +1,52 @@
+.container {
+  display: inline-flex;
+  width: 100%;
+  /* height: 100vh; */
+  font-size: 0;
+  /* flex-grow: 1; */
+
+  font-size: 0;
+}
+.componentWrapper {
+  /* width: calc(100vw - 150px); */
+  /* height: 100vh; */
+  font-size: 0;
+  flex-basis: calc(100% - 160px);
+  /* flex-grow: 1;
+  flex-shrink: 1; */
+  /* border: solid 1px rgb(223, 8, 8); */
+  /* background-color: #5f3636; */
+}
+.appearDone {
+  flex-basis: calc(100% - 160px);
+  /* width: 100%; */
+  /* width: calc(100vw - 102px); */
+}
+.enter {
+  flex-basis: 40px;
+
+  /* width: 0; */
+}
+.enterActive {
+  /* flex-basis: calc(100% - 160px); */
+  /* width: 100%; */
+  /* transition: flex-basis 500ms linear; */
+}
+.enterDone {
+  /* flex-basis: calc(100% - 160px); */
+  /* width: 100%; */
+  /* width: 500px; */
+}
+.exit {
+  /* flex-basis: calc(100% - 160px); */
+  display: none;
+  /* overflow: hidden; */
+}
+.exitActive {
+  display: none;
+  /* overflow: hidden; */
+}
+.exitDone {
+  /* display: none; */
+  /* overflow: hidden; */
+}

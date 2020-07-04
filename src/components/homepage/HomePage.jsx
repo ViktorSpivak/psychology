@@ -53,12 +53,12 @@ export class HomePage extends Component {
           </ul>
           <ul className={style.frontInfoList}>
             <li className={style.frontInfoList__list}>
-              <Link to="/story" className={style.frontInfoList__link}>
+              <Link to="/mystory" className={style.frontInfoList__link}>
                 Обо мне
               </Link>
             </li>
             <li className={style.frontInfoList__list}>
-              <Link to="/spacialization" className={style.frontInfoList__link}>
+              <Link to="/specialization" className={style.frontInfoList__link}>
                 Ситуации,
                 <br /> когда ко мне обращаются
               </Link>
@@ -78,21 +78,10 @@ export class HomePage extends Component {
                 Посмотреть и почитать
               </Link>
             </li>
-            {/* <li className={style.frontInfoList__list}>
-              <Link to="/read" className={style.frontInfoList__link}>
-                Почитать
-              </Link>
-            </li> */}
           </ul>
           <div className={style.wave}>
             <Wave></Wave>
           </div>
-
-          {/* <div className={style.runningLine}>
-            <Link to="/useful" className={style.runningLine_link}>
-              Есть вопросы? Напиши мне сейчас !
-            </Link>
-          </div> */}
           <div className={style.gameClick}>
             <Link to="/game" className={style.gameClick_link}>
               Don`t click it :)

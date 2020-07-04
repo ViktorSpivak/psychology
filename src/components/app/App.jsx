@@ -12,6 +12,7 @@ import { Game } from "../game/Game";
 // import Read from "../read/Read";
 import { Useful } from "../useful/Useful";
 import SocialLinks from "../socialLinks/SocialLinks";
+import { MiddlePage } from "../middlepage/Middlepage";
 // import Specialization from "../specialization/Specialization";
 import { PropositionWindow } from "../propositionWindow/PropositionWindow";
 // import { CSSTransition } from "react-transition-group";
@@ -28,13 +29,14 @@ export const App = () => {
         <Route path="/menu" component={Menu}></Route>
         <Route path="/game" component={Game}></Route>
 
-        {/* <Route path="/mystory" component={MyStory}></Route>
-        <Route path="/specialization" component={Specialization}></Route>
-        <Route path="/forwhom" component={ForWhom}></Route> */}
-        <Route path="/contacts" component={Contacts}></Route>
-        {/* <Route path="/watch" component={Watch}></Route> */}
+        <Route path="/mystory" component={MiddlePage}></Route>
+        <Route path="/specialization" component={MiddlePage}></Route>
+        {/* <Route path="/forwhom" component={ForWhom}></Route> */}
+        <Route path="/contacts" component={MiddlePage}></Route>
+        <Route path="/howItWorks" component={MiddlePage}></Route>
+        <Route path="/watch" component={MiddlePage}></Route>
         {/* <Route path="/read" component={Read}></Route> */}
-        <Route path="/useful" component={Useful}></Route>
+        {/* <Route path="/useful" component={Useful}></Route> */}
         <Route component={HomePage}></Route>
       </Switch>
     </div>

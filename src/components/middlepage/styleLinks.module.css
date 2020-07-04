@@ -1,0 +1,58 @@
+.link {
+  writing-mode: vertical-lr;
+  text-align: center;
+  transform: rotate(180deg);
+  /* width: 100%; */
+  flex-basis: 40px;
+  /* flex-shrink: 1; */
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  /* outline: 1px solid #666; */
+  border: solid 1px green;
+
+  /* border-left: solid 0.1px rgba(0, 0, 0, 0.1);
+  border-right: solid 0.1px rgba(0, 0, 0, 0.1); */
+}
+.linkText {
+  margin: 0;
+  font-size: 34px;
+  /* line-height: 56px; */
+  overflow: hidden;
+}
+.enter {
+  /* display: none; */
+  /* opacity: 0; */
+  /* width: 0; */
+  flex-basis: 70%;
+  /* width: calc (100vw - 104px); */
+}
+.enterActive {
+  /* display: none; */
+  flex-basis: 40px;
+  /* opacity: 1; */
+  /* display: block; */
+  /* width: 26px; */
+  transition: flex-basis 500ms linear;
+  /* opacity 3500ms ease-out; */
+}
+.enterDone {
+  /* opacity: 1; */
+  /* display: none; */
+}
+.exit {
+  /* flex-basis: calc(100% - 160px); */
+  display: none;
+  /* opacity: 1; */
+}
+.exitActive {
+  flex-basis: 40px;
+  /* width: 0;
+  opacity: 0;
+  transition: */
+  /* opacity 500ms ease-out; */
+  /* width 1500ms linear; */
+}
+.exitDone {
+  /* display: none; */
+}
