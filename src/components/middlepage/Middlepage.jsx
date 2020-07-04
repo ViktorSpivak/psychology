@@ -22,7 +22,7 @@ export const MiddlePage = () => {
   const matchSpecialization = useRouteMatch("/specialization");
   const matchHowItWorks = useRouteMatch("/howItWorks");
   const matchWatch = useRouteMatch("/watch");
-  console.log(document.body.clientHeight);
+  // console.log(document.body.clientHeight);
   // , document.body.clientWidth);
 
   return (
@@ -59,7 +59,7 @@ export const MiddlePage = () => {
           key={matchSpecialization}
           timeout={daleyLeafOver}
           classNames={style}
-          unmountOnExit
+          // unmountOnExit
         >
           <div className={style.componentWrapper}>
             <Specialization />

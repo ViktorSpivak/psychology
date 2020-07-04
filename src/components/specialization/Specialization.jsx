@@ -7,23 +7,25 @@ export const Specialization = () => {
   const [turn2, setTurn2] = useState(false);
   const [turn3, setTurn3] = useState(false);
   const [turn4, setTurn4] = useState(false);
+  // const interval1 = setInterval(() => setTurn1(!turn1), 1000);
+  // setInterval(() => setTurn1(!turn1), 6000);
 
+  // setTurn1(true);
   useEffect(() => {
-    const interval1 = setInterval(() => setTurn1(!turn1), 9000);
-    const interval2 = setInterval(() => setTurn2(!turn2), 6000);
-    const interval3 = setInterval(() => setTurn3(!turn3), 7000);
-    const interval4 = setInterval(() => setTurn4(!turn4), 4000);
-    return clearInterval(interval1, interval2, interval3, interval4);
-    // clearInterval(interval1), clearInterval(interval1);
-    // clearInterval(interval1);
+    const interval1 = setTimeout(() => setTurn1((state) => !state), 3000);
+    const interval2 = setInterval(() => setTurn2((state) => !state), 5000);
+    const interval3 = setInterval(() => setTurn3((state) => !state), 7000);
+    const interval4 = setInterval(() => setTurn4((state) => !state), 4000);
+    return () => {
+      clearInterval(interval1);
+      clearInterval(interval2);
+      clearInterval(interval3);
+      clearInterval(interval4);
+    };
   }, []);
-
+  console.log(turn1);
   return (
-    <div
-      className={style.container}
-
-      //  onClick={() => setState(!state)}
-    >
+    <div className={style.container}>
       <ul className={style.specialization}>
         <li className={style.scene}>
           <CSSTransition in={turn1} timeout={1000} classNames={style}>

@@ -4,6 +4,7 @@
   transform: rotate(180deg);
   /* width: 100%; */
   flex-basis: 40px;
+  flex-grow: 1;
   /* flex-shrink: 1; */
   margin: 0;
   height: 100vh;
@@ -24,16 +25,17 @@
   /* display: none; */
   /* opacity: 0; */
   /* width: 0; */
-  flex-basis: 70%;
+  /* flex-basis: 50%; */
   /* width: calc (100vw - 104px); */
 }
 .enterActive {
   /* display: none; */
-  flex-basis: 40px;
+  /* flex-basis: 40px; */
   /* opacity: 1; */
   /* display: block; */
   /* width: 26px; */
-  transition: flex-basis 500ms linear;
+  flex-grow: 10;
+  transition: flex-grow 500ms linear;
   /* opacity 3500ms ease-out; */
 }
 .enterDone {

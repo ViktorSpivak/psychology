@@ -23,14 +23,14 @@
   /* width: calc(100vw - 102px); */
 }
 .enter {
-  flex-basis: 40px;
+  flex-basis: 50%;
 
   /* width: 0; */
 }
 .enterActive {
-  /* flex-basis: calc(100% - 160px); */
+  flex-basis: 70%;
   /* width: 100%; */
-  /* transition: flex-basis 500ms linear; */
+  transition: flex-basis 500ms linear;
 }
 .enterDone {
   /* flex-basis: calc(100% - 160px); */
