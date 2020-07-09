@@ -1,10 +1,13 @@
 .container {
   width: 100%;
   margin: 0 auto;
+  font-size: 0;
 }
 .line {
   height: 1px;
   background-color: black;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .nav {
   display: flex;
@@ -66,8 +69,7 @@
   justify-content: center;
 
   align-items: center;
-  height: 30vh;
-  /* text-decoration: none; */
+  height: calc(30vh - 5px);
 }
 
 .ask__link {

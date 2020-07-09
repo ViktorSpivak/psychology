@@ -19,7 +19,9 @@ a {
 img {
   display: block;
 }
-
+.container {
+  font-size: 0;
+}
 .enter {
   opacity: 0;
   transform: scale(0.9);

@@ -21,7 +21,7 @@ import style from "./app.module.css";
 
 export const App = () => {
   return (
-    <div className={style}>
+    <div className={style.container}>
       <PropositionWindow />
       <Switch>
         <Route path="/" exact component={HomePage}></Route>
