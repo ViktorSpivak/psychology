@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
+import { Logo } from "../logo/Logo";
 import style from "./specialization.module.css";
 
 export const Specialization = () => {
@@ -8,7 +9,7 @@ export const Specialization = () => {
   const [turn3, setTurn3] = useState(false);
   const [turn4, setTurn4] = useState(false);
   useEffect(() => {
-    const interval1 = setInterval(() => setTurn1((state) => !state), 3000);
+    const interval1 = setInterval(() => setTurn1((state) => !state), 8000);
     const interval2 = setInterval(() => setTurn2((state) => !state), 5000);
     const interval3 = setInterval(() => setTurn3((state) => !state), 7000);
     const interval4 = setInterval(() => setTurn4((state) => !state), 4000);
@@ -55,7 +56,9 @@ export const Specialization = () => {
           </CSSTransition>
         </li>
       </ul>
-      <p className={style.text}>Specialization</p>
+      <div className={style.logo_modify}>
+        <Logo />
+      </div>
     </div>
   );
 };

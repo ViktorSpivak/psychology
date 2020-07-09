@@ -1,8 +1,6 @@
 .container {
   margin: 0 auto;
 }
-.mainclass {
-}
 .headerBlock {
   padding-top: 2vh;
   display: flex;
@@ -16,7 +14,6 @@
 .sign__text {
   font-size: 40px;
   margin: 0;
-  /* padding-top: 20px; */
 }
 .prophesy {
   font-size: 22px;
@@ -69,15 +66,10 @@
 .gameClick {
   font-size: 20px;
   text-align: center;
-  margin-top: 8vh;
+  padding-top: 2vh;
 }
+
 @media (min-width: 768px) {
-  .sign__text {
-    /* padding-top: 10vh; */
-  }
-  .headerBlock {
-    /* margin-top: 5vh; */
-  }
   .prophesy {
     flex-direction: row;
     justify-content: center;
@@ -93,27 +85,20 @@
     justify-content: center;
   }
   .frontInfoList__list {
-    /* margin-top: 3vh; */
     width: 33%;
   }
   .wave {
     display: block;
-  }
-
-  .gameClick {
-    margin-top: 0;
   }
   .gameClick_link {
     color: black;
   }
   .footerStyle {
     display: block;
-    margin-top: 5vh;
+    padding-top: 2vh;
   }
 }
 @media (min-width: 1024px) {
-  .sign {
-  }
   .prophesy {
     padding-top: 5vh;
   }
@@ -127,9 +112,7 @@
   .wave {
     padding-top: 6vh;
   }
-  .gameClick {
-    /* margin-top: 50px; */
-  }
+
   .footerStyle {
     padding-top: 5vh;
   }

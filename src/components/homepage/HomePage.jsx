@@ -7,7 +7,7 @@ import Menu from "../menu/Menu";
 // import MyStory from "../mystory/MyStory";
 // import NameLogo from "../namelogo/NameLogo";
 // import Read from "../read/Read";
-// import RuningLine from "../useful/Useful";
+import { Logo } from "../logo/Logo";
 import SocialLinks from "../socialLinks/SocialLinks";
 // import Spacialization from "../specialization/Specialization";
 import Wave from "../wave/Wave";
@@ -27,12 +27,12 @@ export class HomePage extends Component {
           </div>
           <ul className={style.prophesy}>
             <li className={style.prophesy__list}>
-              <NavLink
+              <Link
                 to="/spacialization/mentoring"
                 className={style.prophesy__link}
               >
                 Коуч.
-              </NavLink>
+              </Link>
             </li>
             <li className={style.prophesy__list}>
               <Link
@@ -89,12 +89,7 @@ export class HomePage extends Component {
           </div>
         </main>
         <footer className={style.footerStyle}>
-          <span>
-            YS
-            <br />
-            coaching
-          </span>
-          {/* <SocialLinks></SocialLinks> */}
+          <Logo />
         </footer>
       </div>
     );

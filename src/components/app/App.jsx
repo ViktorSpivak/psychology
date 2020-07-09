@@ -10,7 +10,7 @@ import { Game } from "../game/Game";
 // import MyStory from "../mystory/MyStory";
 // import NameLogo from "../namelogo/NameLogo";
 // import Read from "../read/Read";
-import { Useful } from "../useful/Useful";
+import { AskMe } from "../askMe/AskMe";
 import SocialLinks from "../socialLinks/SocialLinks";
 import { MiddlePage } from "../middlepage/Middlepage";
 // import Specialization from "../specialization/Specialization";
@@ -36,7 +36,7 @@ export const App = () => {
         <Route path="/howItWorks" component={MiddlePage}></Route>
         <Route path="/watch" component={MiddlePage}></Route>
         {/* <Route path="/read" component={Read}></Route> */}
-        {/* <Route path="/useful" component={Useful}></Route> */}
+        <Route path="/askme" component={AskMe}></Route>
         <Route component={HomePage}></Route>
       </Switch>
     </div>

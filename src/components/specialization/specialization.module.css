@@ -2,7 +2,7 @@
   position: relative;
   height: 100vh;
 }
-.nameLogo {
+.logo_modify {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -15,7 +15,7 @@
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   padding: 6vh;
-  grid-gap: 8vw;
+  grid-gap: 12vw;
   overflow: hidden;
   height: 100%;
   animation: Show 1s;
@@ -25,7 +25,7 @@
   padding: 0;
   margin: 0;
   perspective: 100vw;
-  border: solid 7px rgba(0, 0, 0, 0.1);
+  border: solid 5px rgba(0, 0, 0, 0.1);
 }
 .card {
   width: 100%;
@@ -34,8 +34,6 @@
   transition: transform 1s;
   transform-style: preserve-3d;
   font-size: 35px;
-
-  /* background-color: blueviolet; */
 }
 
 .enterActive {

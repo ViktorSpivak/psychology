@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import style from "./useful.module.css";
+import style from "./askme.module.css";
 
-export const Useful = () => {
+export const AskMe = () => {
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
   const [phone, setPhone] = useState("");

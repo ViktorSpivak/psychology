@@ -1,33 +1,34 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import style from "./propositionWindow.module.css";
 
 export const PropositionWindow = () => {
   const [show, setShow] = useState(false);
-  // useEffect(() => {
-  //   setTimeout(() => setShow(true), 30000);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShow(!show);
+      return clearInterval(interval);
+    }, 10000);
+  }, []);
   return (
-    <CSSTransition
-      in={show}
-      timeout={{ enter: 2000, exit: 0 }}
-      classNames={style}
-      unmountOnExit
-    >
-      <div className={style.layout} onClick={() => setShow(false)}>
-        <div className={style.modalWindow}>
-          <div className={style.modalWindow_close}>&#10540;</div>
-          <h1 className={style.modalWindow__title}>
-            Здесь вы можете задать вопрос или записатся на консультацию
-          </h1>
-          <button
-            className={style.modalWindow_btnClose}
-            onClick={() => setShow(false)}
-          >
-            Закрыть
-          </button>
+    <Link to="/askme" className={style.outerContainer}>
+      <CSSTransition
+        in={show}
+        timeout={{ enter: 2000, exit: 2000 }}
+        // onEntered={() => setTimeout(() => setShow(false), 6000)}
+        classNames={style}
+        unmountOnExit
+      >
+        <div>
+          <div className={style.container}>
+            <div className={style.item}>
+              {/* <img src="https://www.kirupa.com/images/orange.png" alt="#" /> */}
+            </div>
+            <div className={style.circle}></div>
+          </div>
         </div>
-      </div>
-    </CSSTransition>
+      </CSSTransition>
+    </Link>
   );
 };
