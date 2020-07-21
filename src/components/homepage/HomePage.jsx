@@ -64,7 +64,7 @@ export class HomePage extends Component {
               </Link>
             </li>
             <li className={style.frontInfoList__list}>
-              <Link to="/forwhom" className={style.frontInfoList__link}>
+              <Link to="/howItWorks" className={style.frontInfoList__link}>
                 Как это работает
               </Link>
             </li>

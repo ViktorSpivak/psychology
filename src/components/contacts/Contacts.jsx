@@ -42,7 +42,7 @@ export const Contacts = () => {
       </div>
       <div className={style.line}></div>
       <div className={style.ask}>
-        <Link to="/useful" className={style.ask__link}>
+        <Link to="/askMe" className={style.ask__link}>
           Ask me
         </Link>
       </div>
