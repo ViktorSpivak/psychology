@@ -6,7 +6,7 @@ import { Contacts } from "../contacts/Contacts";
 import { MyStory } from "../mystory/MyStory";
 import { Specialization } from "../specialization/Specialization";
 import HowItWorks from "../howItWorks/HowItWorks";
-import Watch from "../watch/Watch";
+import { Watch } from "../watch/Watch";
 
 import style from "./middlepage.module.css";
 import styleLinks from "./styleLinks.module.css";
