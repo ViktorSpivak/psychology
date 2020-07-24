@@ -11,11 +11,11 @@ import { Watch } from "../watch/Watch";
 import style from "./middlepage.module.css";
 import styleLinks from "./styleLinks.module.css";
 
-export const MiddlePage = () => {
-  const [state, setState] = useState(false);
-  const daleyPage = () => {
-    setTimeout(() => setState(true), 1000);
-  };
+export const MiddlePage = ({ post }) => {
+  // const [state, setState] = useState(false);
+  // const daleyPage = () => {
+  //   setTimeout(() => setState(true), 1000);
+  // };
   const daleyLeafOver = 500;
   const matchMystory = useRouteMatch("/myStory");
   const matchContacts = useRouteMatch("/contacts");
@@ -24,144 +24,146 @@ export const MiddlePage = () => {
   const matchWatch = useRouteMatch("/watch");
   // console.log(document.body.clientHeight);
   // , document.body.clientWidth);
-
+  // console.log(post);
   return (
-    <TransitionGroup appear={true} className={style.container}>
-      {/* <div className={style.container}> */}
-      {matchMystory ? (
-        <CSSTransition
-          key={matchMystory}
-          timeout={daleyLeafOver}
-          classNames={style}
-          // unmountOnExit
-        >
-          <div className={style.componentWrapper}>
-            <MyStory />
-          </div>
-        </CSSTransition>
-      ) : (
-        /* {state && <MyStory />} */
-        // </div>
+    <div>
+      <TransitionGroup appear={true} className={style.container}>
+        {/* <div className={style.container}> */}
+        {matchMystory ? (
+          <CSSTransition
+            key={matchMystory}
+            timeout={daleyLeafOver}
+            classNames={style}
+            // unmountOnExit
+          >
+            <div className={style.componentWrapper}>
+              <MyStory />
+            </div>
+          </CSSTransition>
+        ) : (
+          /* {state && <MyStory />} */
+          // </div>
 
-        <CSSTransition
-          timeout={daleyLeafOver}
-          onEnter={() => setState(false)}
-          onEntered={daleyPage}
-          classNames={styleLinks}
-        >
-          <Link to="/mystory" className={styleLinks.link}>
-            <span className={styleLinks.linkText}>Обо мне</span>
-          </Link>
-        </CSSTransition>
-      )}
-      {matchSpecialization ? (
-        <CSSTransition
-          key={matchSpecialization}
-          timeout={daleyLeafOver}
-          classNames={style}
-          // unmountOnExit
-        >
-          <div className={style.componentWrapper}>
-            <Specialization />
-          </div>
-        </CSSTransition>
-      ) : (
-        /* {state && <Specialization />} */
-        // </div>
-        //
-        <CSSTransition
-          timeout={daleyLeafOver}
-          onEnter={() => setState(false)}
-          onEntered={daleyPage}
-          classNames={styleLinks}
-        >
-          <Link to="/specialization" className={styleLinks.link}>
-            <span className={styleLinks.linkText}>
-              Ситуации, когда ко мне обращаются
-            </span>
-          </Link>
-        </CSSTransition>
-      )}
-      {matchHowItWorks ? (
-        <CSSTransition
-          key={matchHowItWorks}
-          timeout={daleyLeafOver}
-          classNames={style}
-          // unmountOnExit
-        >
-          <div className={style.componentWrapper}>
-            <HowItWorks />
-          </div>
-        </CSSTransition>
-      ) : (
-        /* {state && <HowItWorks />} */
-        // </div>
-        //
-        <CSSTransition
-          timeout={daleyLeafOver}
-          onEnter={() => setState(false)}
-          onEntered={daleyPage}
-          classNames={styleLinks}
-        >
-          <Link to="/howItWorks" className={styleLinks.link}>
-            <span className={styleLinks.linkText}>Как это работает</span>
-          </Link>
-        </CSSTransition>
-      )}
-      {matchContacts ? (
-        <CSSTransition
-          key={matchContacts}
-          timeout={daleyLeafOver}
-          classNames={style}
-          // unmountOnExit
-        >
-          <div className={style.componentWrapper}>
-            <Contacts />
-          </div>
-        </CSSTransition>
-      ) : (
-        /* {state && <Contacts />} */
-        // </div>
-        //
-        <CSSTransition
-          timeout={daleyLeafOver}
-          onEnter={() => setState(false)}
-          onEntered={daleyPage}
-          classNames={styleLinks}
-        >
-          <Link to="/contacts" className={styleLinks.link}>
-            <span className={styleLinks.linkText}>Как со мной связаться</span>
-          </Link>
-        </CSSTransition>
-      )}
-      {matchWatch ? (
-        <CSSTransition
-          key={matchWatch}
-          timeout={daleyLeafOver}
-          classNames={style}
-          // unmountOnExit
-        >
-          <div className={style.componentWrapper}>
-            <Watch />
-          </div>
-        </CSSTransition>
-      ) : (
-        /* {state && <Watch />} */
-        // </div>
+          <CSSTransition
+            timeout={daleyLeafOver}
+            // onEnter={() => setState(false)}
+            // onEntered={daleyPage}
+            classNames={styleLinks}
+          >
+            <Link to="/mystory" className={styleLinks.link}>
+              <span className={styleLinks.linkText}>Обо мне</span>
+            </Link>
+          </CSSTransition>
+        )}
+        {matchSpecialization ? (
+          <CSSTransition
+            key={matchSpecialization}
+            timeout={daleyLeafOver}
+            classNames={style}
+            // unmountOnExit
+          >
+            <div className={style.componentWrapper}>
+              <Specialization />
+            </div>
+          </CSSTransition>
+        ) : (
+          /* {state && <Specialization />} */
+          // </div>
+          //
+          <CSSTransition
+            timeout={daleyLeafOver}
+            // onEnter={() => setState(false)}
+            // onEntered={daleyPage}
+            classNames={styleLinks}
+          >
+            <Link to="/specialization" className={styleLinks.link}>
+              <span className={styleLinks.linkText}>
+                Ситуации, когда ко мне обращаются
+              </span>
+            </Link>
+          </CSSTransition>
+        )}
+        {matchHowItWorks ? (
+          <CSSTransition
+            key={matchHowItWorks}
+            timeout={daleyLeafOver}
+            classNames={style}
+            // unmountOnExit
+          >
+            <div className={style.componentWrapper}>
+              <HowItWorks />
+            </div>
+          </CSSTransition>
+        ) : (
+          /* {state && <HowItWorks />} */
+          // </div>
+          //
+          <CSSTransition
+            timeout={daleyLeafOver}
+            // onEnter={() => setState(false)}
+            // onEntered={daleyPage}
+            classNames={styleLinks}
+          >
+            <Link to="/howItWorks" className={styleLinks.link}>
+              <span className={styleLinks.linkText}>Как это работает</span>
+            </Link>
+          </CSSTransition>
+        )}
+        {matchContacts ? (
+          <CSSTransition
+            key={matchContacts}
+            timeout={daleyLeafOver}
+            classNames={style}
+            // unmountOnExit
+          >
+            <div className={style.componentWrapper}>
+              <Contacts />
+            </div>
+          </CSSTransition>
+        ) : (
+          /* {state && <Contacts />} */
+          // </div>
+          //
+          <CSSTransition
+            timeout={daleyLeafOver}
+            // onEnter={() => setState(false)}
+            // onEntered={daleyPage}
+            classNames={styleLinks}
+          >
+            <Link to="/contacts" className={styleLinks.link}>
+              <span className={styleLinks.linkText}>Как со мной связаться</span>
+            </Link>
+          </CSSTransition>
+        )}
+        {matchWatch ? (
+          <CSSTransition
+            key={matchWatch}
+            timeout={daleyLeafOver}
+            classNames={style}
+            // unmountOnExit
+          >
+            <div className={style.componentWrapper}>
+              <Watch />
+            </div>
+          </CSSTransition>
+        ) : (
+          /* {state && <Watch />} */
+          // </div>
 
-        <CSSTransition
-          timeout={daleyLeafOver}
-          onEnter={() => setState(false)}
-          onEntered={daleyPage}
-          classNames={styleLinks}
-        >
-          <Link to="/watch" className={styleLinks.link}>
-            <span className={styleLinks.linkText}>Посмотреть и почитать</span>
-          </Link>
-        </CSSTransition>
-      )}
-    </TransitionGroup>
-    // </div>
+          <CSSTransition
+            timeout={daleyLeafOver}
+            // onEnter={() => setState(false)}
+            // onEntered={daleyPage}
+            classNames={styleLinks}
+          >
+            <Link to="/watch" className={styleLinks.link}>
+              <span className={styleLinks.linkText}>Посмотреть и почитать</span>
+            </Link>
+          </CSSTransition>
+        )}
+      </TransitionGroup>
+      {post}
+    </div>
   );
 };
 // export const MiddlePage = () => {

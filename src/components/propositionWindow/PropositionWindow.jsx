@@ -1,34 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
+import mail from "../../images/handsPhoto/google+mail+icon.png";
 import style from "./propositionWindow.module.css";
 
 export const PropositionWindow = () => {
-  const [show, setShow] = useState(false);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShow(!show);
-      return clearInterval(interval);
-    }, 10000);
-  }, []);
+  // const [show, setShow] = useState(true);
+
+  // console.log(homepage);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setShow(!show);
+  //     return clearInterval(interval);
+  //   }, 1000);
+  // }, []);
   return (
-    <Link to="/askme" className={style.outerContainer}>
-      <CSSTransition
-        in={show}
+    <>
+      {/* {!homepage && ( */}
+      <Link to="/askMe" className={style.outerContainer}>
+        {/* <CSSTransition
+        in={homepage}
         timeout={{ enter: 2000, exit: 2000 }}
-        // onEntered={() => setTimeout(() => setShow(false), 6000)}
         classNames={style}
         unmountOnExit
-      >
-        <div>
-          <div className={style.container}>
-            <div className={style.item}>
-              {/* <img src="https://www.kirupa.com/images/orange.png" alt="#" /> */}
-            </div>
-            <div className={style.circle}></div>
-          </div>
+      > */}
+        <div className={style.container}>
+          <img src={mail} alt="mail" className={style.item} />
+          <div className={style.circle}></div>
         </div>
-      </CSSTransition>
-    </Link>
+        {/* </CSSTransition> */}
+      </Link>
+      {/* )} */}
+    </>
   );
 };

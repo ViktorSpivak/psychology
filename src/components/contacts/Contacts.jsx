@@ -41,11 +41,11 @@ export const Contacts = () => {
         </span>
       </div>
       <div className={style.line}></div>
-      <div className={style.ask}>
+      {/* <div className={style.ask}>
         <Link to="/askMe" className={style.ask__link}>
           Ask me
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

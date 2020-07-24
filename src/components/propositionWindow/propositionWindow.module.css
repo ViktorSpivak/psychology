@@ -1,14 +1,12 @@
 .outerContainer {
-  position: absolute;
-  /* top: 0;
-  left: 0; */
+  position: fixed;
   right: 0;
   bottom: 0;
   z-index: 50;
 }
 .container {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,8 +17,8 @@
 .circle {
   background-color: rgb(235, 127, 33, 191);
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   opacity: 0;
   animation: scaleIn 3s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
@@ -28,17 +26,15 @@
 
 .item {
   z-index: 100;
-  padding: 5px;
-  border: solid 3px rgb(35, 186, 206);
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: rgb(234, 236, 228);
 }
 
-.item img {
+/* .item img {
   width: 150px;
-}
+} */
 /* .layout::before {
   position: absolute;
   content: "";

@@ -1,7 +1,7 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Route, Switch, useRouteMatch, useLocation } from "react-router-dom";
 import HomePage from "../homepage/HomePage";
-import { Contacts } from "../contacts/Contacts";
+// import { Contacts } from "../contacts/Contacts";
 // import ForWhom from "../forwhom/ForWhom";
 import Menu from "../menu/Menu";
 import { Game } from "../game/Game";
@@ -15,29 +15,74 @@ import SocialLinks from "../socialLinks/SocialLinks";
 import { MiddlePage } from "../middlepage/Middlepage";
 // import Specialization from "../specialization/Specialization";
 import { PropositionWindow } from "../propositionWindow/PropositionWindow";
-// import { CSSTransition } from "react-transition-group";
 
 import style from "./app.module.css";
+// import HowItWorks from "../howItWorks/HowItWorks";
 
 export const App = () => {
+  // const [matchHome, setMatchHome] = useState(false);
+  // const match = useLocation();
+  // console.log(matchHome);
+  // useEffect(() => {
+  //   setMatchHome(false);
+  // }, []);
+  // console.log(matchHome);
+  // setMatchHome(false);
   return (
     <div className={style.container}>
-      <PropositionWindow />
-      <Switch>
-        <Route path="/" exact component={HomePage}></Route>
-        <Route path="/socialLinks" component={SocialLinks}></Route>
-        <Route path="/menu" component={Menu}></Route>
-        <Route path="/game" component={Game}></Route>
+      {/* <PropositionWindow /> */}
 
-        <Route path="/mystory" component={MiddlePage}></Route>
-        <Route path="/specialization" component={MiddlePage}></Route>
+      <Switch>
+        {/* <Route path="/" exact>
+          <HomePage />
+        </Route> */}
+        <Route path="/socialLinks">
+          <SocialLinks />
+        </Route>
+        <Route path="/menu">
+          <Menu />
+        </Route>
+        <Route path="/game">
+          <Game />
+        </Route>
+        <Route
+          path={[
+            "/mystory",
+            "/specialization",
+            "/contacts",
+            "/howItWorks",
+            "/watch",
+            // "/askme",
+          ]}
+        >
+          <MiddlePage post={<PropositionWindow />} />
+        </Route>
+        {/* <Route path="/specialization">
+          <MiddlePage />
+        </Route> */}
         {/* <Route path="/forwhom" component={ForWhom}></Route> */}
-        <Route path="/contacts" component={MiddlePage}></Route>
-        <Route path="/howItWorks" component={MiddlePage}></Route>
-        <Route path="/watch" component={MiddlePage}></Route>
-        {/* <Route path="/read" component={Read}></Route> */}
-        <Route path="/askme" component={AskMe}></Route>
-        <Route component={HomePage}></Route>
+        {/* <Route path="/contacts">
+          <MiddlePage />
+        </Route> */}
+        {/* <Route path="/howItWorks">
+          <MiddlePage />
+        </Route> */}
+        {/* <Route path="/watch">
+          <MiddlePage />
+        </Route> */}
+        <Route path="/askMe">
+          <AskMe />
+        </Route>
+        <Route
+        // children={() => {
+        //   console.log("ccc");
+        //   setMatchHome(true);
+        //   return <HomePage />;
+        // }}
+        >
+          <HomePage />
+          {/* <PropositionWindow homepage={true} /> */}
+        </Route>
       </Switch>
     </div>
   );
