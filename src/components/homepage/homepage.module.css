@@ -2,14 +2,20 @@
   margin: 0 auto;
 }
 .headerBlock {
-  padding-top: 2vh;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90vh;
 }
 .sign {
   text-align: center;
   font-weight: 200;
-  padding-top: 5vh;
 }
 .sign__text {
   font-size: 40px;
@@ -29,7 +35,6 @@
   display: flex;
   flex-direction: column;
   font-size: 22px;
-  padding-top: 3vh;
   list-style: none;
   text-align: center;
   align-items: center;
@@ -43,7 +48,7 @@
   padding-left: 5px;
 }
 .frontInfoList__list {
-  padding-top: 2vh;
+  padding-top: 4vh;
 }
 .prophesy__link {
   color: black;
@@ -56,20 +61,21 @@
 .wave {
   display: none;
 }
-.footerStyle {
+.footer {
   display: none;
-  text-align: center;
-  font-size: 30px;
-  line-height: 30px;
+  height: 10vh;
 }
 
 .gameClick {
+  color: black;
   font-size: 20px;
-  text-align: center;
-  padding-top: 2vh;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
+  .main {
+    height: 80vh;
+  }
   .prophesy {
     flex-direction: row;
     justify-content: center;
@@ -80,12 +86,11 @@
   }
   .frontInfoList {
     flex-direction: row;
-    padding-top: 4vh;
     flex-wrap: wrap;
     justify-content: center;
   }
   .frontInfoList__list {
-    width: 33%;
+    flex-basis: 33%;
   }
   .wave {
     display: block;
@@ -93,35 +98,36 @@
   .gameClick_link {
     color: black;
   }
-  .footerStyle {
-    display: block;
-    padding-top: 2vh;
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (min-width: 1024px) {
-  .prophesy {
-    padding-top: 5vh;
-  }
-  .sign__text {
-    padding-top: 90px;
-  }
   .frontInfoList {
     flex-wrap: nowrap;
-    padding-top: 6vh;
-  }
-  .wave {
-    padding-top: 6vh;
-  }
-
-  .footerStyle {
-    padding-top: 5vh;
   }
 }
-/* @keyframes runningLine {
-  0% {
-    transform: translate(0, 0);
+@media (orientation: landscape) and (max-height: 748px) {
+  .main {
+    color: brown;
   }
-  100% {
-    transform: translate(-100%, 0);
+  .frontInfoList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-} */
+  .frontInfoList__list {
+    flex-basis: 33%;
+  }
+  .wave {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .main {
+    height: 90vh;
+  }
+}

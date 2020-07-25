@@ -6,40 +6,36 @@
   height: 100vh;
 }
 .line {
-  height: 1px;
-  background-color: black;
+  margin: 0;
+  border: 0;
+  height: 0.8px;
+  background: black;
+  font-size: 0;
 }
 
 .form {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.useful__title {
-  padding-bottom: 3vh;
-}
-.useful__title {
-  text-align: center;
+  position: relative;
+  width: 80%;
 }
 .input {
-  width: inherit;
+  padding-left: 15px;
   width: 100%;
   height: 10vh;
   border: none;
   outline: none;
-
   font-size: 30px;
+  font-family: "Poiret One", cursive;
 }
 .acceptBlock {
   margin: 0 auto;
-  height: 10vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 10px;
+  padding-top: 40px;
 }
 .acceptText_main {
   margin: 0;
-  padding-left: 15px;
+  padding: 20px;
 }
 
 .acceptInput {
@@ -58,34 +54,34 @@
 .acceptCheckBox {
   display: flex;
   align-items: center;
-  margin-top: 30px;
-  width: 400px;
+  width: 300px;
 }
 .submitBtn {
   outline: none;
   border: none;
   background: none;
-  margin-top: 30px;
   cursor: pointer;
+  font-size: 1.5rem;
+  font-family: "Poiret One", cursive;
 }
-.useful__acceptSubmitText {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 0;
-}
-.useful__acceptLink {
+.acceptLink {
   font-size: 1rem;
   text-transform: uppercase;
   color: inherit;
 }
-
+.errorStyle {
+  position: absolute;
+  right: 10px;
+  color: red;
+  font-size: 18px;
+}
 @media (min-width: 768px) {
   .form {
     padding: 0;
-    width: 500px;
+    width: 650px;
   }
-  .useful__Form {
-    margin-top: 15vh;
+  .acceptCheckBox {
+    width: 400px;
   }
   .acceptBlock {
     width: 500px;

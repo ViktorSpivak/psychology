@@ -102,100 +102,112 @@ export const AskMe = () => {
   const [accept, setAccept] = useState(false);
   return (
     <div className={style.container}>
-      <div className={style.wrapper}>
-        <Formik
-          initialValues={{ firstName: "", lastName: "", email: "", text: "" }}
-          validationSchema={Yup.object({
-            firstName: Yup.string()
-              .max(15, "Must be 15 characters or less")
-              .required("Required"),
-            lastName: Yup.string()
-              .max(20, "Must be 20 characters or less")
-              .required("Required"),
-            email: Yup.string()
-              .email("Invalid email address")
-              .required("Required"),
-            text: Yup.string()
-              .max(200, "Must be 200 characters or less")
-              .required("Required"),
-          })}
-          onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
-          }}
-        >
-          <Form name="askForm" className={style.form}>
-            <Field
-              name="firstName"
-              type="text"
-              className={style.input}
-              placeholder="First name"
-            />
-            <ErrorMessage name="firstName" />
+      <Formik
+        initialValues={{ firstName: "", lastName: "", email: "", text: "" }}
+        validationSchema={Yup.object({
+          firstName: Yup.string()
+            .max(15, "Must be 15 characters or less")
+            .required("Required"),
+          lastName: Yup.string().max(20, "Must be 20 characters or less"),
+          email: Yup.string()
+            .email("Invalid email address")
+            .required("Required"),
+          text: Yup.string()
+            .max(200, "Must be 200 characters or less")
+            .required("Required"),
+        })}
+        onSubmit={(values, { setSubmitting }) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 400);
+          setSubmitting(false);
+          console.log("ddd");
+        }}
+      >
+        <Form className={style.form}>
+          <Field
+            name="firstName"
+            type="text"
+            className={style.input}
+            placeholder="First name"
+          />
+          <ErrorMessage
+            name="firstName"
+            component="div"
+            className={style.errorStyle}
+          />
 
-            <div className={style.line}></div>
-            <Field
-              name="lastName"
-              type="text"
-              className={style.input}
-              placeholder="Last name"
-            />
-            <ErrorMessage name="lastName" />
+          <div className={style.line}></div>
+          <Field
+            name="lastName"
+            type="text"
+            className={style.input}
+            placeholder="Last name"
+          />
+          <ErrorMessage
+            name="lastName"
+            component="div"
+            className={style.errorStyle}
+          />
 
-            <div className={style.line}></div>
-            <Field
-              name="email"
-              type="text"
-              className={style.input}
-              placeholder="Email"
-            />
-            <ErrorMessage name="email" />
+          <div className={style.line}></div>
+          <Field
+            name="email"
+            type="text"
+            className={style.input}
+            placeholder="Email"
+          />
+          <ErrorMessage
+            name="email"
+            component="div"
+            className={style.errorStyle}
+          />
 
-            <div className={style.line}></div>
-            <Field
-              name="text"
-              type="text"
-              className={style.input}
-              placeholder="Text"
-            />
-            <ErrorMessage name="text" />
-            <div className={style.line}></div>
-          </Form>
-        </Formik>
-        <div className={style.acceptBlock}>
-          <div className={style.acceptCheckBox}>
-            <input
-              type="radio"
-              id="radioButton"
-              checked={accept}
-              onClick={() => setAccept(!accept)}
-              readOnly
-              className={style.acceptInput}
-            ></input>
-            <p className={accept ? style.acceptTextIsActive : style.acceptText}>
-              <a
-                href="/"
-                target="blank"
-                rel="noopener noreferrer"
-                className={style.useful__acceptLink}
+          <div className={style.line}></div>
+          <Field
+            name="text"
+            type="text"
+            className={style.input}
+            placeholder="Text"
+          />
+          <ErrorMessage
+            name="text"
+            component="div"
+            className={style.errorStyle}
+          />
+          <div className={style.line}></div>
+          <div className={style.acceptBlock}>
+            <div className={style.acceptCheckBox}>
+              <input
+                type="radio"
+                id="radioButton"
+                checked={accept}
+                onClick={() => setAccept(!accept)}
+                readOnly
+                className={style.acceptInput}
+              ></input>
+              <p
+                className={accept ? style.acceptTextIsActive : style.acceptText}
               >
-                I accept the terms as laid out in the privacy policy
-              </a>
-            </p>
+                <a
+                  href="/"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  className={style.acceptLink}
+                >
+                  I accept the terms as laid out in the privacy policy
+                </a>
+              </p>
+            </div>
+            {accept && (
+              <button type="submit" className={style.submitBtn}>
+                Submit<span>&#10230;</span>
+              </button>
+            )}
           </div>
-          {accept && (
-            <button type="submit" form="askForm" className={style.submitBtn}>
-              Submit<span>&#10230;</span>
-            </button>
-          )}
-          {/* <div className={style.useful__acceptSubmit}>
-          <p className={style.useful__acceptSubmitText}>SUBMIT</p>
-          <span>&#10230;</span>
-        </div> */}
-        </div>
-      </div>
+        </Form>
+      </Formik>
     </div>
   );
 };

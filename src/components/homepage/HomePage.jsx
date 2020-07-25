@@ -21,7 +21,7 @@ export class HomePage extends Component {
           <SocialLinks></SocialLinks>
           <Menu></Menu>
         </header>
-        <main className={style.mainclass}>
+        <main className={style.main}>
           <div className={style.sign}>
             <p className={style.sign__text}>Юлия Сохач</p>
           </div>
@@ -82,13 +82,11 @@ export class HomePage extends Component {
           <div className={style.wave}>
             <Wave></Wave>
           </div>
-          <div className={style.gameClick}>
-            <Link to="/game" className={style.gameClick_link}>
-              Don`t click it :)
-            </Link>
-          </div>
+          <Link to="/game" className={style.gameClick}>
+            Don`t click it :)
+          </Link>
         </main>
-        <footer className={style.footerStyle}>
+        <footer className={style.footer}>
           <Logo />
         </footer>
       </div>
