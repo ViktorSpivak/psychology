@@ -181,15 +181,12 @@ export const AskMe = () => {
             <div className={style.acceptCheckBox}>
               <input
                 type="radio"
-                id="radioButton"
                 checked={accept}
                 onClick={() => setAccept(!accept)}
                 readOnly
                 className={style.acceptInput}
               ></input>
-              <p
-                className={accept ? style.acceptTextIsActive : style.acceptText}
-              >
+              <p className={accept ? style.acceptTextActive : style.acceptText}>
                 <a
                   href="/"
                   target="blank"
@@ -200,11 +197,12 @@ export const AskMe = () => {
                 </a>
               </p>
             </div>
-            {accept && (
-              <button type="submit" className={style.submitBtn}>
-                Submit<span>&#10230;</span>
-              </button>
-            )}
+            <button
+              type="submit"
+              className={accept ? style.submitBtnActive : style.submitBtn}
+            >
+              Submit<span>&#10230;</span>
+            </button>
           </div>
         </Form>
       </Formik>

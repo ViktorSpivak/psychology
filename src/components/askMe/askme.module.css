@@ -6,6 +6,7 @@
   height: 100vh;
 }
 .line {
+  /* position: relative; */
   margin: 0;
   border: 0;
   height: 0.8px;
@@ -20,49 +21,78 @@
 .input {
   padding-left: 15px;
   width: 100%;
-  height: 10vh;
+  height: 68px;
   border: none;
   outline: none;
   font-size: 30px;
   font-family: "Poiret One", cursive;
 }
 .acceptBlock {
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding-top: 40px;
+  height: 70px;
+  /* padding-top: 0.8vh; */
 }
-.acceptText_main {
+.text {
   margin: 0;
-  padding: 20px;
+  padding-left: 20px;
 }
 
 .acceptInput {
   transform: scale(1.5);
-  margin-left: 10px;
+  margin: 0;
+}
+.acceptInput:checked:after {
+  position: absolute;
+  content: "";
+  /* top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%; */
+  top: 20%;
+  bottom: 20%;
+  left: 20%;
+  right: 20%;
+  /* background: black; */
+  border-radius: 50%;
+  /* background-color: #000; */
+  /* color: #000; */
+  /* opacity: 0.8; */
 }
 .acceptText {
   color: red;
-  composes: acceptText_main;
+  composes: text;
 }
 
-.acceptTextIsActive {
+.acceptTextActive {
   color: black;
-  composes: acceptText_main;
+  composes: text;
 }
 .acceptCheckBox {
-  display: flex;
+  display: inline-flex;
+  width: 100%;
   align-items: center;
-  width: 300px;
+  justify-content: center;
+  padding: 2vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
 }
-.submitBtn {
+.btn {
+  display: block;
+  margin: 0 auto;
+  padding: 2vh;
   outline: none;
   border: none;
   background: none;
   cursor: pointer;
   font-size: 1.5rem;
   font-family: "Poiret One", cursive;
+}
+.submitBtn {
+  visibility: hidden;
+  composes: btn;
+}
+.submitBtnActive {
+  visibility: visible;
+  composes: btn;
 }
 .acceptLink {
   font-size: 1rem;
@@ -72,6 +102,7 @@
 .errorStyle {
   position: absolute;
   right: 10px;
+  transform: translateY(-100%);
   color: red;
   font-size: 18px;
 }
@@ -83,10 +114,12 @@
   .acceptCheckBox {
     width: 400px;
   }
+  .btn {
+    margin: 0;
+    margin-left: auto;
+  }
   .acceptBlock {
-    width: 500px;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    display: flex;
   }
 }
 @media (min-width: 1024px) {
