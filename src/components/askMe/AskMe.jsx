@@ -1,114 +1,25 @@
 import React, { useState } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import Axios from "axios";
 import * as Yup from "yup";
 import style from "./askme.module.css";
 
-// export const AskMe = () => {
-//   const [name, setName] = useState("");
-//   const [mail, setMail] = useState("");
-//   const [phone, setPhone] = useState("");
-//   const [massage, setMassage] = useState("");
-//   const [accept, setAccept] = useState(false);
-
-//   const handleSubmit = () => {};
-
-//   return (
-//     <div className={style.useful}>
-//       <form
-//         type="submit"
-//         onSubmit={handleSubmit}
-//         className={style.useful__Form}
-//       >
-//         <h1 className={style.useful__title}>
-//           Чем я могу быть полезна для Вас&nbsp;?
-//         </h1>
-//         <input
-//           type="text"
-//           value={name}
-//           name="name"
-//           onChange={(ev) => setName(ev.target.value)}
-//           className={style.useful__input}
-//           autoComplete="off"
-//           placeholder="Имя"
-//         ></input>
-//         <div className={style.line}></div>
-//         <input
-//           type="text"
-//           name="mail"
-//           value={mail}
-//           onChange={(ev) => setMail(ev.target.value)}
-//           className={style.useful__input}
-//           autoComplete="off"
-//           placeholder="Email"
-//         ></input>
-//         <div className={style.line}></div>
-//         <input
-//           type="text"
-//           name="phone"
-//           value={phone}
-//           onChange={(ev) => setPhone(ev.target.value)}
-//           className={style.useful__input}
-//           autoComplete="off"
-//           placeholder="Телефон"
-//         ></input>
-//         <div className={style.line}></div>
-//         <input
-//           type="text"
-//           name="massage"
-//           value={massage}
-//           onChange={(ev) => setMassage(ev.target.value)}
-//           className={style.useful__input}
-//           autoComplete="off"
-//           placeholder="Сообщение"
-//         ></input>
-//         <div className={style.line}></div>
-//         <div className={style.useful__acceptBlock}>
-//           <div className={style.useful__acceptCheckBox}>
-//             <input
-//               type="radio"
-//               id="radioButton"
-//               checked={accept}
-//               onClick={() => setAccept(!accept)}
-//               readOnly
-//               className={style.useful__acceptInput}
-//             ></input>
-//             <p
-//               className={
-//                 accept
-//                   ? style.useful__acceptTextIsActive
-//                   : style.useful__acceptText
-//               }
-//             >
-//               <a
-//                 href="/"
-//                 target="blank"
-//                 rel="noopener noreferrer"
-//                 className={style.useful__acceptLink}
-//               >
-//                 I accept the terms as laid out in the privacy policy
-//               </a>
-//             </p>
-//           </div>
-//           <div className={style.useful__acceptSubmit}>
-//             <p className={style.useful__acceptSubmitText}>SUBMIT</p>
-//             <span>&#10230;</span>
-//           </div>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// };
 export const AskMe = () => {
   const [accept, setAccept] = useState(false);
+  const phoneRegExp = /^[0-9]+$/;
   return (
     <div className={style.container}>
       <Formik
-        initialValues={{ firstName: "", lastName: "", email: "", text: "" }}
+        initialValues={{ name: "", phone: "", email: "", text: "" }}
         validationSchema={Yup.object({
-          firstName: Yup.string()
-            .max(15, "Must be 15 characters or less")
+          name: Yup.string()
+            .max(30, "Must be 30 characters or less")
             .required("Required"),
-          lastName: Yup.string().max(20, "Must be 20 characters or less"),
+          phone: Yup.string()
+            .matches(phoneRegExp, "только цифры")
+            .min(10, "мин 10 символов ")
+            .max(10, "макс 10 символов")
+            .required("Required"),
           email: Yup.string()
             .email("Invalid email address")
             .required("Required"),
@@ -117,36 +28,39 @@ export const AskMe = () => {
             .required("Required"),
         })}
         onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
+          console.log(values);
           setSubmitting(false);
-          console.log("ddd");
+          Axios({
+            method: "post",
+            url: "https://psychology-server.herokuapp.com/request",
+            data: values,
+          })
+            .then((res) => console.log(res.config.data))
+            .catch((err) => console.log(err));
         }}
       >
         <Form className={style.form}>
           <Field
-            name="firstName"
+            name="name"
             type="text"
             className={style.input}
-            placeholder="First name"
+            placeholder="Имя"
           />
           <ErrorMessage
-            name="firstName"
+            name="name"
             component="div"
             className={style.errorStyle}
           />
 
           <div className={style.line}></div>
           <Field
-            name="lastName"
+            name="phone"
             type="text"
             className={style.input}
-            placeholder="Last name"
+            placeholder="Телефон"
           />
           <ErrorMessage
-            name="lastName"
+            name="phone"
             component="div"
             className={style.errorStyle}
           />
@@ -169,7 +83,7 @@ export const AskMe = () => {
             name="text"
             type="text"
             className={style.input}
-            placeholder="Text"
+            placeholder="Текст"
           />
           <ErrorMessage
             name="text"

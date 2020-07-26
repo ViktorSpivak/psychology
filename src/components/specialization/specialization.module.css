@@ -15,7 +15,7 @@
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   padding: 6vh;
-  grid-gap: 12vw;
+  grid-gap: 75px;
   overflow: hidden;
   height: 100%;
   animation: Show 1s;

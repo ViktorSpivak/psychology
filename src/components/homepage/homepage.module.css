@@ -98,18 +98,18 @@
   .gameClick_link {
     color: black;
   }
-  .footer {
+  /* .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 }
 @media (min-width: 1024px) {
   .frontInfoList {
     flex-wrap: nowrap;
   }
 }
-@media (orientation: landscape) and (max-height: 648px) {
+@media (orientation: landscape) and (max-height: 520px) {
   .frontInfoList {
     flex-direction: row;
     flex-wrap: wrap;
@@ -121,9 +121,9 @@
   .wave {
     display: none;
   }
-  .footer {
+  /* .footer {
     display: none;
-  }
+  } */
   .main {
     height: 90vh;
   }
