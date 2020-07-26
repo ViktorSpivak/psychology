@@ -51,11 +51,11 @@
   bottom: 20%;
   left: 20%;
   right: 20%;
-  /* background: black; */
+  background: black;
   border-radius: 50%;
   /* background-color: #000; */
   /* color: #000; */
-  /* opacity: 0.8; */
+  opacity: 0.5;
 }
 .acceptText {
   color: red;
