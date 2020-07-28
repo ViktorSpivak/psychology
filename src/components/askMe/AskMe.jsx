@@ -28,14 +28,15 @@ export const AskMe = () => {
             .required("Required"),
         })}
         onSubmit={(values, { setSubmitting }) => {
-          console.log(values);
           setSubmitting(false);
           Axios({
             method: "post",
             url: "https://psychology-server.herokuapp.com/request",
             data: values,
           })
-            .then((res) => console.log(res.config.data))
+            .then((res) =>
+              console.log("Response from server:", res.config.data)
+            )
             .catch((err) => console.log(err));
         }}
       >
