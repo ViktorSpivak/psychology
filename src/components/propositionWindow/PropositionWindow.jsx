@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { CSSTransition } from "react-transition-group";
 import mail from "../../images/handsPhoto/google+mail+icon.png";
 import style from "./propositionWindow.module.css";
 

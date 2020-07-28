@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import Contacts from "../contacts/Contacts";
 // import ForWhom from "../forwhom/ForWhom";
 import Menu from "../menu/Menu";
@@ -7,7 +7,7 @@ import Menu from "../menu/Menu";
 // import MyStory from "../mystory/MyStory";
 // import NameLogo from "../namelogo/NameLogo";
 // import Read from "../read/Read";
-import { Logo } from "../logo/Logo";
+// import { Logo } from "../logo/Logo";
 import SocialLinks from "../socialLinks/SocialLinks";
 // import Spacialization from "../specialization/Specialization";
 import Wave from "../wave/Wave";

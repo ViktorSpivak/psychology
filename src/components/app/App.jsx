@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Route, Switch, useRouteMatch, useLocation } from "react-router-dom";
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 import HomePage from "../homepage/HomePage";
 // import { Contacts } from "../contacts/Contacts";
 // import ForWhom from "../forwhom/ForWhom";

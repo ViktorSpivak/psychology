@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import style from "./contacts.module.css";
 import SocialLinks from "../socialLinks/SocialLinks";
 import { Logo } from "../logo/Logo";

@@ -74,7 +74,7 @@
 
 @media (min-width: 768px) {
   .main {
-    height: 80vh;
+    /* height: 80vh; */
   }
   .prophesy {
     flex-direction: row;
@@ -125,6 +125,6 @@
     display: none;
   } */
   .main {
-    height: 90vh;
+    /* height: 90vh; */
   }
 }
