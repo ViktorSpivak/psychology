@@ -86,9 +86,7 @@ export class HomePage extends Component {
             Don`t click it :)
           </Link>
         </main>
-        {/* <footer className={style.footer}>
-          <Logo />
-        </footer> */}
+        <footer className={style.footer}></footer>
       </div>
     );
   }

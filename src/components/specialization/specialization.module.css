@@ -8,6 +8,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
+  z-index: 10;
+}
+img {
+  display: block;
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
 }
 .specialization {
   list-style: none;

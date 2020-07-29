@@ -10,6 +10,13 @@
 .text {
   font-size: 100px;
 }
+.footer {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: block;
+}
 @keyframes Show {
   from {
     opacity: 0;

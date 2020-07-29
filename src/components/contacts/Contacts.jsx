@@ -1,7 +1,8 @@
 import React from "react";
 import style from "./contacts.module.css";
 import SocialLinks from "../socialLinks/SocialLinks";
-import { Logo } from "../logo/Logo";
+// import { Logo } from "../logo/Logo";
+import { Logo } from "../../svgcomponents/Logo";
 // import Menu from "../menu/Menu";
 
 export const Contacts = () => {

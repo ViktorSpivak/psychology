@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
-import { Logo } from "../logo/Logo";
+// import { Logo } from "../logo/Logo";
+import { Logo } from "../../svgcomponents/Logo";
 import style from "./specialization.module.css";
 
 export const Specialization = () => {
@@ -57,7 +58,7 @@ export const Specialization = () => {
         </li>
       </ul>
       <div className={style.logo_modify}>
-        <Logo />
+        <Logo width="200" height="200" />
       </div>
     </div>
   );

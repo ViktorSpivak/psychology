@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import mail from "../../images/handsPhoto/google+mail+icon.png";
+import { Massage } from "../../svgcomponents/massage";
 import style from "./propositionWindow.module.css";
 
 export const PropositionWindow = () => {
@@ -15,7 +15,6 @@ export const PropositionWindow = () => {
   // }, []);
   return (
     <>
-      {/* {!homepage && ( */}
       <Link to="/askMe" className={style.outerContainer}>
         {/* <CSSTransition
         in={homepage}
@@ -24,8 +23,8 @@ export const PropositionWindow = () => {
         unmountOnExit
       > */}
         <div className={style.container}>
-          <img src={mail} alt="mail" className={style.item} />
           <div className={style.circle}></div>
+          <Massage />
         </div>
         {/* </CSSTransition> */}
       </Link>

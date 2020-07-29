@@ -5,8 +5,8 @@
   align-items: center;
   height: 100vh;
 }
+
 .line {
-  /* position: relative; */
   margin: 0;
   border: 0;
   height: 0.8px;
@@ -16,7 +16,8 @@
 
 .form {
   position: relative;
-  width: 80%;
+  width: 90%;
+  margin: 0 auto;
 }
 .input {
   padding-left: 15px;
@@ -29,7 +30,6 @@
 }
 .acceptBlock {
   height: 70px;
-  /* padding-top: 0.8vh; */
 }
 .text {
   margin: 0;
@@ -43,18 +43,12 @@
 .acceptInput:checked:after {
   position: absolute;
   content: "";
-  /* top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%; */
   top: 20%;
   bottom: 20%;
   left: 20%;
   right: 20%;
   background: black;
   border-radius: 50%;
-  /* background-color: #000; */
-  /* color: #000; */
   opacity: 0.5;
 }
 .acceptText {
@@ -106,11 +100,10 @@
   color: red;
   font-size: 18px;
 }
+.footer {
+  display: none;
+}
 @media (min-width: 768px) {
-  .form {
-    padding: 0;
-    width: 650px;
-  }
   .acceptCheckBox {
     width: 400px;
   }
@@ -120,6 +113,13 @@
   }
   .acceptBlock {
     display: flex;
+  }
+  .footer {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: block;
   }
 }
 @media (min-width: 1024px) {

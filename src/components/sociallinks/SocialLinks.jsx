@@ -1,8 +1,12 @@
 import React from "react";
-import { AiOutlineFacebook } from "react-icons/ai";
-import { AiOutlineLinkedin } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { IconContext } from "react-icons";
+// import { AiOutlineFacebook } from "react-icons/ai";
+// import { AiOutlineLinkedin } from "react-icons/ai";
+// import { AiOutlineInstagram } from "react-icons/ai";
+// import { IconContext } from "react-icons";
+import Facebook from "../../images/handsPhoto/facebook.png";
+import Insta from "../../images/handsPhoto/INSTA.png";
+import Youtube from "../../images/handsPhoto/youtube.png";
+import style from "./sociallinks.module.css";
 const SocialLinks = () => {
   const face = () => {
     const actualWindowHeight = window.innerHeight;
@@ -15,11 +19,14 @@ const SocialLinks = () => {
 
   return (
     <div>
-      <IconContext.Provider value={{ size: "50px" }}>
+      {/* <IconContext.Provider value={{ size: "50px" }}>
         <AiOutlineFacebook onClick={face} />
         <AiOutlineLinkedin onClick={face} />
         <AiOutlineInstagram onClick={face} />
-      </IconContext.Provider>
+      </IconContext.Provider> */}
+      <img src={Facebook} alt="facebook" className={style.img} onClick={face} />
+      <img src={Insta} alt="insta" className={style.img} onClick={face} />
+      <img src={Youtube} alt="youtube" className={style.img} onClick={face} />
     </div>
   );
 };
