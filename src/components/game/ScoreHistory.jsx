@@ -5,7 +5,6 @@ import { Scissors } from "../../svgcomponents/scissors";
 import style from "./scorehistory.module.css";
 
 export const ScoreHistory = ({ results }) => {
-  // const { round, winner, AIChoice, GamerChoice } = results;
   const selectComponent = (color, round, choice) => {
     let svgComponent;
     switch (choice) {
@@ -24,12 +23,12 @@ export const ScoreHistory = ({ results }) => {
     return svgComponent;
   };
   const GamersChoiceOfRound = ({ round }) => {
-    const color = results[round].winner !== "gamer" ? "#e62649" : "#BEBEBE";
+    const color = results[round].winner !== "gamer" ? "#e62649" : "#eb7f21";
     const choice = results[round].gamerChoice;
     return selectComponent(color, round, choice);
   };
   const AiChoiceOfRound = ({ round }) => {
-    const color = results[round].winner !== "ai" ? "#e62649" : "#BEBEBE";
+    const color = results[round].winner !== "ai" ? "#e62649" : "#eb7f21";
     const choice = results[round].aiChoice;
     return selectComponent(color, round, choice);
   };

@@ -1,15 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import Contacts from "../contacts/Contacts";
-// import ForWhom from "../forwhom/ForWhom";
-import Menu from "../menu/Menu";
-// import Watch from "../watch/Watch";
-// import MyStory from "../mystory/MyStory";
-// import NameLogo from "../namelogo/NameLogo";
-// import Read from "../read/Read";
-// import { Logo } from "../logo/Logo";
+import { Logo } from "../../svgcomponents/Logo";
 import SocialLinks from "../socialLinks/SocialLinks";
-// import Spacialization from "../specialization/Specialization";
 import Wave from "../wave/Wave";
 import style from "./homepage.module.css";
 
@@ -18,13 +10,12 @@ export class HomePage extends Component {
     return (
       <div className={style.container}>
         <header className={style.headerBlock}>
+          <Logo></Logo>
           <SocialLinks></SocialLinks>
-          <Menu></Menu>
         </header>
         <main className={style.main}>
-          <div className={style.sign}>
-            <p className={style.sign__text}>Юлия Сохач</p>
-          </div>
+          <h1 className={style.title}>Юлия Сохач</h1>
+
           <ul className={style.prophesy}>
             <li className={style.prophesy__list}>
               <Link
@@ -86,7 +77,6 @@ export class HomePage extends Component {
             Don`t click it :)
           </Link>
         </main>
-        <footer className={style.footer}></footer>
       </div>
     );
   }

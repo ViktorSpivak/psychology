@@ -9,7 +9,8 @@ import { Paper } from "../../svgcomponents/paper";
 import { Stone } from "../../svgcomponents/stone";
 import { Scissors } from "../../svgcomponents/scissors";
 import { ScoreHistory } from "./ScoreHistory";
-import { Logo } from "../logo/Logo";
+// import { Logo } from "../logo/Logo";
+import { Logo } from "../../svgcomponents/Logo";
 
 export const Game = () => {
   const [isThinking, setIsThinking] = useState(false);
@@ -59,7 +60,7 @@ export const Game = () => {
     setRound(round + 1);
   };
   return (
-    <>
+    <div>
       <main className={style.container}>
         <h2 className={style.round}>
           <span>ROUND</span> <span>{round + 1}</span>
@@ -141,6 +142,6 @@ export const Game = () => {
       <footer className={style.footer}>
         <Logo />
       </footer>
-    </>
+    </div>
   );
 };

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Massage } from "../../svgcomponents/massage";
-import style from "./propositionWindow.module.css";
+import style from "./SendButton.module.css";
 
-export const PropositionWindow = () => {
+export const SendButton = () => {
   // const [show, setShow] = useState(true);
 
   // console.log(homepage);

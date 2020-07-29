@@ -3,9 +3,9 @@ import React from "react";
 // import { AiOutlineLinkedin } from "react-icons/ai";
 // import { AiOutlineInstagram } from "react-icons/ai";
 // import { IconContext } from "react-icons";
-import Facebook from "../../images/handsPhoto/facebook.png";
-import Insta from "../../images/handsPhoto/INSTA.png";
-import Youtube from "../../images/handsPhoto/youtube.png";
+import Facebook from "../../images/socialIcons/facebook.png";
+import Insta from "../../images/socialIcons/INSTA.png";
+import Youtube from "../../images/socialIcons/youtube.png";
 import style from "./sociallinks.module.css";
 const SocialLinks = () => {
   const face = () => {

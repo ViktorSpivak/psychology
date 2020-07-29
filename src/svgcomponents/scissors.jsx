@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Scissors = ({ isButton, color }) => {
-  const circle = <circle fill="#e62649" cx="30" cy="30" r="30"></circle>;
+  const circle = <circle fill="#eb7f21" cx="30" cy="30" r="30"></circle>;
   return (
     <svg aria-hidden="true" viewBox="0 0 60 60">
       <title>scissors</title>
