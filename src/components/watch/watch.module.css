@@ -5,6 +5,7 @@
   height: 100%;
   align-items: center;
   animation: Show 1s linear;
+  height: 2000px;
 }
 .text {
   font-size: 100px;

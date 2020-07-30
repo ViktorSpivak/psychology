@@ -7,7 +7,8 @@ import Facebook from "../../images/socialIcons/facebook.png";
 import Insta from "../../images/socialIcons/INSTA.png";
 import Youtube from "../../images/socialIcons/youtube.png";
 import style from "./sociallinks.module.css";
-const SocialLinks = () => {
+
+export const SocialLinks = () => {
   const face = () => {
     const actualWindowHeight = window.innerHeight;
     window.open(
@@ -30,5 +31,3 @@ const SocialLinks = () => {
     </div>
   );
 };
-
-export default SocialLinks;

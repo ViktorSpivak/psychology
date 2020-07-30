@@ -4,20 +4,13 @@ import HomePage from "../homepage/HomePage";
 import Menu from "../menu/Menu";
 import { Game } from "../game/Game";
 import { AskMe } from "../askMe/AskMe";
-import SocialLinks from "../socialLinks/SocialLinks";
+import { SocialLinks } from "../socialLinks/SocialLinks";
 import { MiddlePage } from "../middlepage/Middlepage";
 import { SendButton } from "../sendButton/SendButton";
+import { LoginForm } from "../../admin/loginForm/LoginForm";
 import style from "./app.module.css";
 
 export const App = () => {
-  // const [matchHome, setMatchHome] = useState(false);
-  // const match = useLocation();
-  // console.log(matchHome);
-  // useEffect(() => {
-  //   setMatchHome(false);
-  // }, []);
-  // console.log(matchHome);
-  // setMatchHome(false);
   return (
     <div className={style.container}>
       <Switch>
@@ -45,6 +38,18 @@ export const App = () => {
           <MiddlePage post={<SendButton />} />
         </Route>
         <Route path="/askMe">
+          <AskMe />
+        </Route>
+        <Route path="/admin">
+          <AskMe />
+        </Route>
+        <Route path="/login">
+          <LoginForm />
+        </Route>
+        <Route path="/logout">
+          <AskMe />
+        </Route>
+        <Route path="/signup">
           <AskMe />
         </Route>
         <Route>

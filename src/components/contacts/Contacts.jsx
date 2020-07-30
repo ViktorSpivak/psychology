@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./contacts.module.css";
-import SocialLinks from "../socialLinks/SocialLinks";
+import { SocialLinks } from "../socialLinks/SocialLinks";
 // import { Logo } from "../logo/Logo";
 import { Logo } from "../../svgcomponents/Logo";
 // import Menu from "../menu/Menu";
@@ -8,10 +8,6 @@ import { Logo } from "../../svgcomponents/Logo";
 export const Contacts = () => {
   return (
     <div className={style.container}>
-      <div className={style.nav}>
-        {/* <span>Yulia Sohach</span> */}
-        {/* <Menu /> */}
-      </div>
       <div className={style.form}>
         <div className={style.line}></div>
         <div className={style.address}>
@@ -40,12 +36,6 @@ export const Contacts = () => {
       <div className={style.footer}>
         <Logo />
       </div>
-
-      {/* <div className={style.ask}>
-        <Link to="/askMe" className={style.ask__link}>
-          Ask me
-        </Link>
-      </div> */}
     </div>
   );
 };

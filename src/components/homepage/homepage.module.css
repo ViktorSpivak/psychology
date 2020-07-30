@@ -1,7 +1,7 @@
 .container {
   margin: 0 auto;
 }
-.headerBlock {
+.header {
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -33,31 +33,15 @@
   padding-left: 0;
 }
 
-.frontInfoList {
-  display: flex;
-  flex-direction: column;
-  font-size: 22px;
-  list-style: none;
-  text-align: center;
-  align-items: center;
-  margin: 0;
-  padding-left: 0;
+.prophesy__list {
 }
 
-.prophesy__list {
+.link {
   padding-top: 1vh;
   padding-left: 5px;
   padding-left: 5px;
-}
-.frontInfoList__list {
-  padding-top: 4vh;
-}
-.prophesy__link {
   color: black;
   align-content: center;
-}
-.frontInfoList__link {
-  composes: prophesy__link;
 }
 
 .wave {
@@ -79,18 +63,11 @@
     flex-direction: row;
     justify-content: center;
   }
-  .prophesy__list {
+  .link {
     padding-left: 5px;
     padding-right: 5px;
   }
-  .frontInfoList {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .frontInfoList__list {
-    flex-basis: 33%;
-  }
+
   .wave {
     display: block;
   }
@@ -103,27 +80,15 @@
     align-items: center;
   } */
 }
-@media (min-width: 1024px) {
-  .frontInfoList {
-    flex-wrap: nowrap;
-  }
-}
+
 @media (orientation: landscape) and (max-height: 520px) {
-  .frontInfoList {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .frontInfoList__list {
-    flex-basis: 33%;
-  }
   .wave {
     display: none;
   }
-  /* .footer {
-    display: none;
-  } */
-  .main {
-    /* height: 90vh; */
-  }
+}
+.login {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
 }
