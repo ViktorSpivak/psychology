@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import Axios from "axios";
+
 import * as Yup from "yup";
+import { actions } from "../../redux/sessionRedux";
+import * as api from "../../services/api";
 import { Logo } from "../../svgcomponents/Logo";
 import style from "./loginForm.module.css";
 
 export const LoginForm = () => {
-  const [accept, setAccept] = useState(false);
+  // const [accept, setAccept] = useState(false);
+  const user = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  const submit = async (values, { setSubmitting }) => {
+    setSubmitting(false);
+    const response = await api.loginRequest(values);
+    dispatch(actions.loginRequest(response));
+  };
   return (
     <div className={style.container}>
       <main>
@@ -20,22 +31,11 @@ export const LoginForm = () => {
 
               .min(10, "мин 10 символов ")
               .required("Required"),
-            email: Yup.string()
-              .email("Invalid email address")
-              .required("Required"),
+            email: Yup.string(),
+            // .email("Invalid email address")
+            // .required("Required"),
           })}
-          onSubmit={(values, { setSubmitting }) => {
-            setSubmitting(false);
-            Axios({
-              method: "post",
-              url: "https://psychology-server.herokuapp.com/request",
-              data: values,
-            })
-              .then((res) =>
-                console.log("Response from server:", res.config.data)
-              )
-              .catch((err) => console.log(err));
-          }}
+          onSubmit={submit}
         >
           <Form className={style.form}>
             <Field
@@ -75,6 +75,9 @@ export const LoginForm = () => {
             />
             <div className={style.line}></div>
             <button type="submit">Login</button>
+            <button type="button" onClick={api.logoutRequest}>
+              Logout
+            </button>
           </Form>
         </Formik>
       </main>
